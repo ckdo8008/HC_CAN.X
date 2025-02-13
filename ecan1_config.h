@@ -54,8 +54,8 @@ extern "C" {
     // *****************************************************************************
     // *****************************************************************************
     /* CAN Baud Rate Configuration         */
-#define FCAN    60000000UL
-#define BITRATE 500000UL
+#define FCAN    64000000UL
+#define BITRATE 1000000UL
 #define NTQ     20  // 20 Time Quanta in a Bit Time
 #define BRP_VAL ( (FCAN / (2 * NTQ * BITRATE)) - 1 )
 

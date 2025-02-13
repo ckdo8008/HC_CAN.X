@@ -199,14 +199,30 @@ CiCFG1<BRP> =(FCAN /(2 �N�FBAUD))� 1
 //    C1CFG2bits.PRSEG = 0x4;
 //    C1CFG2bits.SAM = 0x1;
 
-    C1CFG1bits.SJW = 0x0;      // SJW = 1TQ (저장값 0)
-    C1CFG1bits.BRP = 0x1;      // BRP = 1 (계산 결과)
-    C1CFG2bits.SEG1PH = 0x6;   // Phase Segment 1 = 6+1 = 7TQ
-    C1CFG2bits.SEG2PHTS = 0x1; // Phase Segment 2 선택 (사용 방식 그대로)
-    C1CFG2bits.SEG2PH = 0x2;   // Phase Segment 2 = 2+1 = 3TQ
-    C1CFG2bits.PRSEG = 0x3;    // Propagation Segment = 3+1 = 4TQ
-    C1CFG2bits.SAM = 0x1;      // SAM 그대로
+//    C1CFG1bits.SJW = 0x0;      // SJW = 1TQ (저장값 0)
+//    C1CFG1bits.BRP = 0x1;      // BRP = 1 (계산 결과)
+//    C1CFG2bits.SEG1PH = 0x6;   // Phase Segment 1 = 6+1 = 7TQ
+//    C1CFG2bits.SEG2PHTS = 0x1; // Phase Segment 2 선택 (사용 방식 그대로)
+//    C1CFG2bits.SEG2PH = 0x2;   // Phase Segment 2 = 2+1 = 3TQ
+//    C1CFG2bits.PRSEG = 0x3;    // Propagation Segment = 3+1 = 4TQ
+//    C1CFG2bits.SAM = 0x1;      // SAM 그대로
 
+
+//    C1CFG1bits.SJW = 0x0;   // SJW = 0+1 = 1 TQ
+//    C1CFG1bits.BRP = 1;  // BRP는 별도로 계산(예: 1)
+//    C1CFG2bits.SEG1PH = 0x5;   // Phase Segment 1 = 5+1 = 6 TQ
+//    C1CFG2bits.SEG2PHTS = 0x1; // 그대로 사용
+//    C1CFG2bits.SEG2PH = 0x4;   // Phase Segment 2 = 4+1 = 5 TQ
+//    C1CFG2bits.PRSEG = 0x3;    // Propagation Delay = 3+1 = 4 TQ
+//    C1CFG2bits.SAM = 0x1;      // 그대로 사용
+
+    C1CFG1bits.SJW = 0x0;   // SJW = 0+1 = 1 TQ
+    C1CFG1bits.BRP = 1;  // BRP는 별도로 계산(예: 1)
+    C1CFG2bits.SEG1PH = 0x7;   // Phase Segment 1 = 7+1 = 8 TQ
+    C1CFG2bits.SEG2PHTS = 0x1; // 그대로 사용
+    C1CFG2bits.SEG2PH = 0x1;   // Phase Segment 2 = 1+1 = 2 TQ
+    C1CFG2bits.PRSEG = 0x4;    // Propagation Delay = 4+1 = 5 TQ
+    C1CFG2bits.SAM = 0x1;      // 그대로 사용
 
 //    C1CTRL1bits.CANCKS = 0x1;
 //    C1CFG1 = 0x0005; // BRP = 5 → (BRP+1)=6, SJW = 1 (SJW field = 0)

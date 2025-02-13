@@ -36,7 +36,7 @@
 #pragma config FCKSM = CSECMD           // Clock Switching Mode bits (Clock switching is enabled,Fail-safe Clock Monitor is disabled)
 
 // FOSCSEL
-#pragma config FNOSC = PRIPLL              // Oscillator Source Selection (Internal Fast RC (FRC))
+#pragma config FNOSC = FRC              // Oscillator Source Selection (Internal Fast RC (FRC))
 #pragma config PWMLOCK = OFF             // PWM Lock Enable bit (PWM registers may be written without key sequence)
 #pragma config IESO = OFF                // Two-speed Oscillator Start-up Enable bit (Start up with user-selected oscillator source)
 
@@ -223,9 +223,13 @@ void ClearIntrflags(void) {
 }
 
 void OscConfig(void) {
-    PLLFBDbits.PLLDIV = 38;
-    CLKDIVbits.PLLPOST = 0;
-    CLKDIVbits.PLLPRE = 3;
+//    PLLFBDbits.PLLDIV = 38;
+//    CLKDIVbits.PLLPOST = 0;
+//    CLKDIVbits.PLLPRE = 3;
+    PLLFBD = 34 - 2;           // M = 34 (PLL Feedback Divisor)
+    CLKDIVbits.PLLPRE = 4 - 2; // N1 = 4 (PLL Pre-scaler)
+    CLKDIVbits.PLLPOST = 0;    // N2 = 2 (PLL Post-scaler, 0 = Divide by 2)
+
     RCONbits.SWDTEN = 0;
     __builtin_write_OSCCONH(0x03);
     __builtin_write_OSCCONL(OSCCON | 0x01);
@@ -237,11 +241,9 @@ void __attribute__((interrupt, no_auto_psv)) _C1Interrupt(void) {
 
     if (C1INTFbits.ERRIF) {
         C1INTFbits.ERRIF = 0;
-
     }
     if (C1INTFbits.IVRIF) {
         C1INTFbits.IVRIF = 0;
-
     }
     if (C1INTFbits.TXBP) {
         C1INTFbits.TXBP = 0;
