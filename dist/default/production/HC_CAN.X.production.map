@@ -23,7 +23,7 @@ Command:
   -Lc:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../support/dsPIC33F/gld \
   build/default/production/main.o \
   build/default/production/EEPROM.o \
-  C:\Users\cgdo\AppData\Local\Temp\ccQgpkrg.0000b6d0.o \
+  C:\Users\cgdo\AppData\Local\Temp\ccStD8FH.00003f1c.o \
   --local-stack \
   --defsym=__MPLAB_BUILD=1 \
   -Tp33EP64MC502.gld.00 \
@@ -65,7 +65,7 @@ section                    address   length (PC units)   length (bytes) (dec)
 .text                        0x200               0xff0          0x17e8  (6120)
 .text                       0x11f0                0x8a            0xcf  (207)
 .dinit                      0x127a                0x1e            0x2d  (45)
-_05815F6067ad36bb           0x1800              0x3000          0x4800  (18432)
+_057C5F6067ad3b35           0x1800              0x3000          0x4800  (18432)
 .text                       0x4800               0x8e4           0xd56  (3414)
 
                      Total program memory used (bytes):         0x6e3a  (28218) 42%
@@ -78,7 +78,7 @@ section                    address      alignment gaps    total length  (dec)
 .nbss                       0x1000                   0            0x46  (70)
 .ndata                      0x1046                   0             0x4  (4)
 .nbss                       0x104a                   0             0x2  (2)
-_0584F9C067ad37ca           0x2fc0                   0            0x20  (32)
+_057FE9C067ad3b35           0x2fc0                   0            0x20  (32)
 
                         Total data memory used (bytes):           0x6c  (108) 1%
 
@@ -232,7 +232,7 @@ Linker script and memory map
 
 LOAD build/default/production/main.o
 LOAD build/default/production/EEPROM.o
-LOAD C:\Users\cgdo\AppData\Local\Temp\ccQgpkrg.0000b6d0.o
+LOAD C:\Users\cgdo\AppData\Local\Temp\ccStD8FH.00003f1c.o
                     0x0001                  __MPLAB_BUILD = 0x1
 LOAD c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib/dsPIC33E\libp33EP64MC502-elf.a
 LOAD c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libfx-elf.a
@@ -1891,9 +1891,9 @@ __c30_signature
  .nbss              0x104a          0x2 build/default/production/EEPROM.o
                     0x104a                  _dataEEFlags
 
-_0584F9C067ad37ca
+_057FE9C067ad3b35
                     0x2fc0         0x20
- _0584F9C067ad37ca
+ _057FE9C067ad3b35
                     0x2fc0         0x20 build/default/production/main.o
                     0x2fc0                  _ecan1msgBuf
 
@@ -1918,9 +1918,9 @@ _0584F9C067ad37ca
  .config_JTAGEN
                   0x00aff0          0x2 build/default/production/main.o
 
-_05815F6067ad36bb
+_057C5F6067ad3b35
                     0x9800       0x3000 load address 0x001800  
- _05815F6067ad36bb
+ _057C5F6067ad3b35
                     0x9800       0x3000 build/default/production/EEPROM.o
                     0x9800                  _emulationPages
 
@@ -1936,7 +1936,7 @@ _05815F6067ad36bb
                   0x004f5c                  _DataEEWrite
 
 .text             0x0011f0         0x8a
- .text            0x0011f0         0x8a C:\Users\cgdo\AppData\Local\Temp\ccQgpkrg.0000b6d0.o
+ .text            0x0011f0         0x8a C:\Users\cgdo\AppData\Local\Temp\ccStD8FH.00003f1c.o
                   0x0011f0                  _ReadPMHigh
                   0x0011f4                  _ReadPMLow
                   0x0011f8                  _UnlockPM
