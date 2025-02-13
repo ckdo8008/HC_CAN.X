@@ -25,7 +25,7 @@ Command:
   build/default/production/EEPROM.o \
   build/default/production/ecan1drv.o \
   build/default/production/ecan1_config.o \
-  C:\Users\cgdo\AppData\Local\Temp\ccN8anWc.000081cc.o \
+  C:\Users\cgdo\AppData\Local\Temp\ccz1fzOT.0000d704.o \
   --local-stack \
   --defsym=__MPLAB_BUILD=1 \
   -Tp33EP64MC502.gld.00 \
@@ -74,7 +74,7 @@ Data Memory  [Origin = 0x1000, Length = 0x2000]
 section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
 .nbss                       0x1000                   0            0x16  (22)
-_057B1A2067ad518b           0x2fc0                   0            0x20  (32)
+_057A1A2067ad541e           0x2fc0                   0            0x20  (32)
 
                         Total data memory used (bytes):           0x36  (54) <1%
 
@@ -208,7 +208,7 @@ LOAD build/default/production/main.o
 LOAD build/default/production/EEPROM.o
 LOAD build/default/production/ecan1drv.o
 LOAD build/default/production/ecan1_config.o
-LOAD C:\Users\cgdo\AppData\Local\Temp\ccN8anWc.000081cc.o
+LOAD C:\Users\cgdo\AppData\Local\Temp\ccz1fzOT.0000d704.o
                     0x0001                  __MPLAB_BUILD = 0x1
 LOAD c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib/dsPIC33E\libp33EP64MC502-elf.a
 LOAD c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libfx-elf.a
@@ -1852,9 +1852,9 @@ __c30_signature
  .nbss              0x1014          0x2 build/default/production/EEPROM.o
                     0x1014                  _dataEEFlags
 
-_057B1A2067ad518b
+_057A1A2067ad541e
                     0x2fc0         0x20
- _057B1A2067ad518b
+ _057A1A2067ad541e
                     0x2fc0         0x20 build/default/production/main.o
                     0x2fc0                  _ecan1msgBuf
 
@@ -1918,7 +1918,7 @@ _0584AF6067ad4012
                   0x000308                  _DMA2Init
                   0x000334                  _Ecan1ClkInit
                   0x00036e                  _Ecan1Init
- .text            0x000408         0x8a C:\Users\cgdo\AppData\Local\Temp\ccN8anWc.000081cc.o
+ .text            0x000408         0x8a C:\Users\cgdo\AppData\Local\Temp\ccz1fzOT.0000d704.o
                   0x000408                  _ReadPMHigh
                   0x00040c                  _ReadPMLow
                   0x000410                  _UnlockPM
